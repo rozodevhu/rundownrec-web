@@ -1,0 +1,24 @@
+# Cloudflare Pages headers. Committed at the site root and read automatically.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.json
+  Cache-Control: public, max-age=0, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/css/*
+  Cache-Control: public, max-age=3600
+
+/js/*
+  Cache-Control: public, max-age=3600
+
+# Use a new filename for each build (version in the name) so clients never
+# get a stale cached binary.
+/downloads/*
+  Cache-Control: public, max-age=86400

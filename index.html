@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang=en>
+	<head>
+		<meta charset=utf-8 />
+		<meta name=viewport content="width=device-width, initial-scale=1" />
+		<meta name=text-scale content=scale />
+
+		<style>
+			:root {
+				color-scheme: light dark;
+				background: #fff;
+			}
+			html,
+			body {
+				min-height: 100%;
+				background: #fff;
+				color: #171717;
+			}
+			@media (prefers-color-scheme: dark) {
+				:root:not([data-theme='light']),
+				:root:not([data-theme='light']) body {
+					background: #0a0a0a;
+					color: #f5f5f5;
+				}
+			}
+			:root[data-theme='dark'],
+			:root[data-theme='dark'] body {
+				color-scheme: dark;
+				background: #0a0a0a;
+				color: #f5f5f5;
+			}
+			:root[data-theme='light'],
+			:root[data-theme='light'] body {
+				color-scheme: light;
+				background: #fff;
+				color: #171717;
+			}
+		</style>
+		<script>
+			(function () {
+				var prefersDark =
+					window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+				var theme = 'light';
+				try {
+					var saved = localStorage.getItem('theme');
+					theme = saved === 'light' || saved === 'dark' ? saved : prefersDark ? 'dark' : 'light';
+				} catch (error) {
+					theme = prefersDark ? 'dark' : 'light';
+				}
+				document.documentElement.setAttribute('data-theme', theme);
+				document.documentElement.style.colorScheme = theme;
+				document.documentElement.style.backgroundColor = theme === 'dark' ? '#0a0a0a' : '#fff';
+			})();
+		</script>
+
+		<title>RunDownRec Clients</title>
+		<meta name=description content="Client builds and special builds for the RunDownRec localhost Revival project." />
+		<link rel=icon href=./favicon.svg type="image/svg+xml" />
+		<link rel=stylesheet href=./css/styles.css />
+	</head>
+	<body>
+		<a class=skip-link href=#main-content>Skip to content</a>
+
+		<header class=site-header>
+			<div>
+				<a href=./ aria-label="RunDownRec home">
+					<span class=site-mark aria-hidden=true>
+						<svg xmlns=http://www.w3.org/2000/svg width=16 height=16 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4" /></svg>
+					</span>
+					<span data-site-name>RunDownRec</span>
+					<span data-site-tag>Clients</span>
+				</a>
+				<nav aria-label="Main navigation" data-tabs>
+					<a href=./#clients data-tab=clients>Clients</a>
+					<a href=./#special data-tab=special>Special Clients</a>
+				</nav>
+				<button id=theme-toggle type=button aria-label="Switch to dark mode" title="Switch to dark mode">
+					<svg class="icon-sun" xmlns=http://www.w3.org/2000/svg width=18 height=18 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><circle cx=12 cy=12 r=4 /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" /></svg>
+					<svg class="icon-moon" xmlns=http://www.w3.org/2000/svg width=18 height=18 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" /></svg>
+				</button>
+			</div>
+		</header>
+
+		<div class=site-frame>
+			<main id=main-content data-main tabindex=-1>
+				<h1 data-tab-heading>Clients</h1>
+				<p class=intro data-site-intro>
+					Current client builds for the RunDownRec localhost project.
+				</p>
+
+				<section class=home-summary aria-label="Collection summary">
+					<div>
+						<p data-stat=entries>0</p>
+						<p>Clients</p>
+					</div>
+					<div>
+						<p data-stat=files>0</p>
+						<p>Files</p>
+					</div>
+					<div>
+						<p data-stat=size>0 B</p>
+						<p>Total size</p>
+					</div>
+				</section>
+
+				<div class=home-search>
+					<label class=sr-only for=client-search>Search clients</label>
+					<input id=client-search type=search placeholder="Search by name, version, manifest ID, status, or notes" autocomplete=off spellcheck=false />
+					<button type=button id=clear-search hidden aria-label="Clear search">
+						<svg xmlns=http://www.w3.org/2000/svg width=16 height=16 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><path d="M18 6 6 18M6 6l12 12" /></svg>
+					</button>
+				</div>
+
+				<div class=home-filters>
+					<label class=sr-only for=status-filter>Filter by status</label>
+					<select id=status-filter>
+						<option value=all>All statuses</option>
+						<option value=ready>Ready</option>
+						<option value=partial>Partial</option>
+						<option value=broken>Broken</option>
+						<option value=archived>Archived</option>
+					</select>
+					<label class=sr-only for=version-filter>Filter by version</label>
+					<select id=version-filter>
+						<option value=all>All versions</option>
+					</select>
+				</div>
+
+				<div class=home-results>
+					<p data-results-count></p>
+					<a href=#adding-a-client>How to add a build</a>
+				</div>
+
+				<table class=builds>
+					<thead>
+						<tr>
+							<th><button type=button data-sort=name aria-pressed=false>Client</button></th>
+							<th><button type=button data-sort=version aria-pressed=false>Version</button></th>
+							<th><button type=button data-sort=date aria-pressed=false>Release date</button></th>
+							<th><button type=button data-sort=manifestId aria-pressed=false>Manifest ID</button></th>
+							<th><button type=button data-sort=uploadedAt aria-pressed=false>Uploaded</button></th>
+							<th><button type=button data-sort=files aria-pressed=false>Files</button></th>
+						</tr>
+					</thead>
+					<tbody data-rows></tbody>
+				</table>
+
+				<p class=empty hidden data-empty>No clients match this search.</p>
+
+				<section class=howto id=adding-a-client aria-label="How to add a client">
+					<h2>Adding a client</h2>
+					<p>
+						Drop the build into <code>downloads/</code>, run
+						<code>.\scripts\add-file.ps1 downloads\my-build.zip</code>, then paste the printed entry into
+						<code>data/clients.json</code> (or <code>data/special-clients.json</code> for the Special tab).
+						Commit and push &mdash; Cloudflare Pages republishes automatically.
+					</p>
+				</section>
+			</main>
+
+			<footer class=site-footer>
+				<div>
+					<p>
+						RunDownRec client index. <span data-site-links></span>
+					</p>
+					<p>RunDownRec is not affiliated with Rec Room Inc. in any way. All trademarks are property of their respective owners.</p>
+				</div>
+			</footer>
+		</div>
+
+		<template data-row-template>
+			<tr>
+				<td data-label="Client">
+					<div class=row-title>
+						<span data-status role=img></span>
+						<span data-name></span>
+					</div>
+					<p class=row-notes data-notes></p>
+				</td>
+				<td data-label="Version"><span data-version></span></td>
+				<td data-label="Release date"><time data-date></time></td>
+				<td data-label="Manifest ID"><button type=button class=copy-address data-copy aria-label="Copy manifest ID" title="Copy manifest ID"><span data-manifest></span></button></td>
+				<td data-label="Uploaded"><time data-uploaded></time></td>
+				<td data-label="Files"><ul class=file-list data-files></ul></td>
+			</tr>
+		</template>
+
+		<script src=./js/app.js></script>
+	</body>
+</html>

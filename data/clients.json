@@ -2,19 +2,19 @@
 	"_readme": "Edit this file to change the Clients tab. Every entry needs name; version, date, manifestId, notes, uploadedAt, status and files are optional. status is one of: ready, partial, broken, archived. File paths are relative to the site root, so they start with downloads/ (or use a full https:// URL for GitHub Releases). Run .\\scripts\\add-file.ps1 downloads\\your-build.zip to generate size + sha256 automatically.",
 	"entries": [
 	{
-			"name": "Rec Room 2016 (legacy)",
+			"name": "Winter Wonderland '16 (The MakerFriends Edition),
 			"version": "2016.06.29",
 			"date": "2016-06-29",
-			"manifestId": "5937396277352677720",
-			"status": "archived",
-			"notes": "PLACEHOLDER ENTRY — earliest build kept for nostalgia sessions. Kept archived so nobody accidentally hands it to a new client.",
-			"uploadedAt": "2026-11-03T20:34:00Z",
+			"manifestId": "1341823113150898819",
+			"status": "Open + Local",
+			"notes": "Winter Wonderland '16 is live: accounts without Steam, pen shapes, a tree, a present that opens, and voice. Be excellent to each other!",
+			"uploadedAt": "2026-11-04T17:36:00Z",
 			"files": [
 				{
-					"label": "rundownrec-placeholder.zip",
-					"path": "downloads/rundownrec-placeholder.zip",
+					"label": "Rec2016-Desktop",
+					"path": "https://github.com/rozodevhu/rundownrec-web/releases/download/Rec2016/RecRoom-2016-Desktop.zip",
 					"size": 640,
-					"sha256": "205cf1d3f5d8a6d2fdfd637fa9ecd1b3f471fb7351682d019b4f15c4dd6fa4ee"
+					"sha256": "43b1043b5f835ef17ba0524bb9b3a4cb48031646194afebe23f59a5848b6ffc5"
 				}
 			]
 		}

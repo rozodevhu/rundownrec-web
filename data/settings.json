@@ -1,0 +1,9 @@
+{
+	"siteName": "RunDownRec",
+	"tag": "Clients",
+	"intro": "Client builds for the RunDownRec localhost revival — grab the client you need, or see the special builds on the next tab.",
+	"links": [
+		{ "label": "Discord", "url": "https://discord.gg/CHANGE-ME" },
+		{ "label": "GitHub", "url": "https://github.com/CHANGE-ME/rundownrec-web" }
+	]
+}

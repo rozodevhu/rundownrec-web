@@ -1,0 +1,45 @@
+{
+	"_readme": "Edit this file to change the Special Clients tab — your own builds, mods and one-off clients. Same schema as data/clients.json.",
+	"entries": [
+		{
+			"name": "RunDownRec Custom Lobby Build",
+			"version": "special-001",
+			"date": "2026-10-28",
+			"manifestId": "1203304444555666777",
+			"status": "ready",
+			"notes": "PLACEHOLDER ENTRY — this tab is where your own builds go. Delete these examples and add the real lobby build you made, with the zip dropped into downloads/.",
+			"uploadedAt": "2026-11-03T20:38:00Z",
+			"files": [
+				{
+					"label": "rundownrec-placeholder.zip",
+					"path": "downloads/rundownrec-placeholder.zip",
+					"size": 640,
+					"sha256": "205cf1d3f5d8a6d2fdfd637fa9ecd1b3f471fb7351682d019b4f15c4dd6fa4ee"
+				},
+				{
+					"label": "manifest.json",
+					"path": "downloads/rundownrec-placeholder-manifest.json",
+					"size": 117,
+					"sha256": "c64dd275956ca6dcf7cc24cd45a76122be0771ffe89fcd5d9209b576c62cfbb8"
+				}
+			]
+		},
+		{
+			"name": "Friend-Only Test Client",
+			"version": "special-002",
+			"date": "2026-11-01",
+			"manifestId": "5234716332756009057",
+			"status": "broken",
+			"notes": "PLACEHOLDER ENTRY — example of a build that does not work right now. The red dot keeps friends from downloading it by mistake.",
+			"uploadedAt": "2026-11-03T20:40:00Z",
+			"files": [
+				{
+					"label": "rundownrec-placeholder.zip",
+					"path": "downloads/rundownrec-placeholder.zip",
+					"size": 640,
+					"sha256": "205cf1d3f5d8a6d2fdfd637fa9ecd1b3f471fb7351682d019b4f15c4dd6fa4ee"
+				}
+			]
+		}
+	]
+}

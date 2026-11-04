@@ -1,0 +1,62 @@
+{
+	"_readme": "Edit this file to change the Clients tab. Every entry needs name; version, date, manifestId, notes, uploadedAt, status and files are optional. status is one of: ready, partial, broken, archived. File paths are relative to the site root, so they start with downloads/ (or use a full https:// URL for GitHub Releases). Run .\\scripts\\add-file.ps1 downloads\\your-build.zip to generate size + sha256 automatically.",
+	"entries": [
+		{
+			"name": "RunDownRec 2024 Stack",
+			"version": "2024.11.03",
+			"date": "2024-11-03",
+			"manifestId": "4180590405597713716",
+			"status": "ready",
+			"notes": "PLACEHOLDER ENTRY — replace the file, manifest ID and notes with your real localhost stack build. This is what friends launch to join the private server.",
+			"uploadedAt": "2026-11-03T20:26:00Z",
+			"files": [
+				{
+					"label": "rundownrec-placeholder.zip",
+					"path": "downloads/rundownrec-placeholder.zip",
+					"size": 640,
+					"sha256": "205cf1d3f5d8a6d2fdfd637fa9ecd1b3f471fb7351682d019b4f15c4dd6fa4ee"
+				},
+				{
+					"label": "manifest.json",
+					"path": "downloads/rundownrec-placeholder-manifest.json",
+					"size": 117,
+					"sha256": "c64dd275956ca6dcf7cc24cd45a76122be0771ffe89fcd5d9209b576c62cfbb8"
+				}
+			]
+		},
+		{
+			"name": "RecLux Bridge Client",
+			"version": "0.9.4",
+			"date": "2025-02-18",
+			"manifestId": "7926661550074548930",
+			"status": "partial",
+			"notes": "PLACEHOLDER ENTRY — avatars and rooms load; voice relay still needs the local TURN config before it is marked ready.",
+			"uploadedAt": "2026-11-03T20:31:00Z",
+			"files": [
+				{
+					"label": "rundownrec-placeholder.zip",
+					"path": "downloads/rundownrec-placeholder.zip",
+					"size": 640,
+					"sha256": "205cf1d3f5d8a6d2fdfd637fa9ecd1b3f471fb7351682d019b4f15c4dd6fa4ee"
+				}
+			]
+		},
+		{
+			"name": "Rec Room 2016 (legacy)",
+			"version": "2016.06.29",
+			"date": "2016-06-29",
+			"manifestId": "5937396277352677720",
+			"status": "archived",
+			"notes": "PLACEHOLDER ENTRY — earliest build kept for nostalgia sessions. Kept archived so nobody accidentally hands it to a new client.",
+			"uploadedAt": "2026-11-03T20:34:00Z",
+			"files": [
+				{
+					"label": "rundownrec-placeholder.zip",
+					"path": "downloads/rundownrec-placeholder.zip",
+					"size": 640,
+					"sha256": "205cf1d3f5d8a6d2fdfd637fa9ecd1b3f471fb7351682d019b4f15c4dd6fa4ee"
+				}
+			]
+		}
+	]
+}

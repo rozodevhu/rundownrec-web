@@ -2,11 +2,11 @@
 	"_readme": "Edit this file to change the Clients tab. Every entry needs name; version, date, manifestId, notes, uploadedAt, status and files are optional. status is one of: ready, partial, broken, archived. File paths are relative to the site root, so they start with downloads/ (or use a full https:// URL for GitHub Releases). Run .\\scripts\\add-file.ps1 downloads\\your-build.zip to generate size + sha256 automatically.",
 	"entries": [
 	{
-			"name": "Winter Wonderland '16 (The MakerFriends Edition),
+		"name": "Winter Wonderland '16 (The MakerFriends Edition)",
 			"version": "2016.06.29",
 			"date": "2016-06-29",
 			"manifestId": "1341823113150898819",
-			"status": "Open + Local",
+			"status": "ready",
 			"notes": "Winter Wonderland '16 is live: accounts without Steam, pen shapes, a tree, a present that opens, and voice. Be excellent to each other!",
 			"uploadedAt": "2026-11-04T17:36:00Z",
 			"files": [
